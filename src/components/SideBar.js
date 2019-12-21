@@ -35,11 +35,12 @@ export default function SideBar() {
 const SideWrapper = styled.nav`
   position: fixed;
   top: 118px;
-  left: 0;
+  left: -5px;
   width: 100%;
   height: 100%;
   background: var(--mainGrey);
   z-index: 10;
+  box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
   border-right: 4px solid var(--primaryColor);
   transition: var(--mainTransition);
   transform: ${props => (props.show ? "translateX(0)" : "translateX(-100%)")};

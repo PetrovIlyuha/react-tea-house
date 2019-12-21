@@ -1,15 +1,21 @@
 import React from "react";
 import { GiApothecary } from "react-icons/gi";
-import { ProductConsumer } from "../context";
+import Hero from "../components/Hero";
+import { Link } from "react-router-dom";
+import mainBackGround from "../images/heroHome.jpg";
 
 export default function HomePage() {
   return (
     <>
-      <ProductConsumer>
-        {value => {
-          return <h1>Hello from Home Page</h1>;
-        }}
-      </ProductConsumer>
+      <Hero
+        title="Marvelous Teas of Precious China"
+        img={mainBackGround}
+        maxHeight
+      >
+        <Link to="/products" className="main-link" style={{ margin: "2rem" }}>
+          Our Products
+        </Link>
+      </Hero>
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 :root {
   --primaryColor: #207ead;
-  --primaryRGBA: rgba(0, 0, 0, 0.3);
+  --primaryRGBA: rgba(0, 0, 0, 0.2);
   --mainGrey: #cfe2ec;
   --darkGrey: #84adad;
   --mainWhite: #dff7eb;
@@ -26,4 +26,27 @@ body {
   font-family: Delius !important;
   background: var(--mainGrey) !important;
   color: var(--mainBlack);
+  /* transform-style: preserve-3d; */
+  transform: perspective(800px);
+}
+
+.main-link {
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  outline: 3px solid var(--primaryColor);
+  outline-offset: 4px;
+  border: none;
+
+  transition: var(--mainTransition);
+}
+
+.main-link:hover {
+  background: var(--darkGrey);
+  text-decoration: none;
+  color: var(--primaryColor);
+  outline-color: var(--darkGrey);
 }

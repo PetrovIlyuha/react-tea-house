@@ -8,12 +8,14 @@ export class ProductProvider extends Component {
     sidebarOpen: false,
     cartOpen: false,
     cartItems: 12,
-    links: linkData
+    links: linkData,
+    cart: []
   };
 
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
   };
+
   handleCart = () => {
     this.setState({ cartOpen: !this.state.cartOpen });
   };

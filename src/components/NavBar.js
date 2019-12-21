@@ -17,9 +17,12 @@ export default function NavBar() {
           <NavWrapper className="text-title">
             <div className="nav-center">
               {sidebarOpen ? (
-                <GiSplitCross className="nav-icon" onClick={handleSidebar} />
+                <GiSplitCross
+                  className="nav-icon-left"
+                  onClick={handleSidebar}
+                />
               ) : (
-                <FaBars className="nav-icon" onClick={handleSidebar} />
+                <FaBars className="nav-icon-left" onClick={handleSidebar} />
               )}
               <div className="logo-section">
                 <img src={logo} alt="company brand logo" className="teapot" />
@@ -29,7 +32,7 @@ export default function NavBar() {
               </div>
               <div className="nav-cart">
                 <FaCartPlus
-                  className="nav-icon"
+                  className="nav-icon-right"
                   onClick={handleCart}
                 ></FaCartPlus>
                 <div className="cart-items">{cartItems}</div>
@@ -49,7 +52,8 @@ const NavWrapper = styled.nav`
   top: 0;
   width: 100%;
   padding: 1rem 1.5rem;
-  background: var(--primaryColor);
+  background: linear-gradient(to left, #003973, #e5e5be);
+  /* background: var(--primaryColor); */
   border-bottom: 2px solid var(--primaryColor);
   box-shadow: -2px 2px 18px -1px rgba(18, 18, 20, 1);
   .nav-center {
@@ -85,11 +89,18 @@ const NavWrapper = styled.nav`
     padding-right: 10px;
     margin-bottom: 10px;
   }
-  .nav-icon {
+  .nav-icon-right {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
   }
+
+  .nav-icon-left {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: green;
+  }
+
   .logo-section {
     display: flex;
     align-items: center;

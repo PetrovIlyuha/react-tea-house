@@ -60,7 +60,7 @@ const SideWrapper = styled.nav`
   }
 
   .sidebar-link:hover {
-    background: var(--primaryColor);
+    background: #1c9141;
     color: var(--mainWhite);
     padding: 0.5rem 1.5rem 0.5rem 2.5rem;
     text-decoration: none;

@@ -26,8 +26,6 @@ body {
   font-family: Delius !important;
   background: var(--mainGrey) !important;
   color: var(--mainBlack);
-  /* transform-style: preserve-3d; */
-  transform: perspective(800px);
 }
 
 .main-link {
@@ -40,7 +38,6 @@ body {
   outline: 3px solid var(--primaryColor);
   outline-offset: 4px;
   border: none;
-
   transition: var(--mainTransition);
 }
 

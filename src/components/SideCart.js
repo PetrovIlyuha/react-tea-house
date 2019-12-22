@@ -20,8 +20,8 @@ export default function SideCart() {
 const CartWrapper = styled.div`
   position: fixed;
   top: 118px;
-  right: -5px;
-  width: 100%;
+  right: -3px;
+  width: 0;
   height: 100%;
   box-shadow: -2px 0px 15px -2px rgba(0, 0, 0, 0.75);
   background: var(--mainGrey);

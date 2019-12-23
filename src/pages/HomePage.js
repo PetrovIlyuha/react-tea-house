@@ -1,5 +1,4 @@
 import React from "react";
-import { GiApothecary } from "react-icons/gi";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 import mainBackGround from "../images/heroHome.jpg";

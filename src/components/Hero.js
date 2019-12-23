@@ -4,7 +4,7 @@ import mainBackGround from "../images/heroHome.jpg";
 
 export default function Hero({ img, title, maxHeight, children }) {
   return (
-    <HeroWrapper max={maxHeight} img={img}>
+    <HeroWrapper maxHeight img={img}>
       <div className="banner">
         <h1 className="title">{title}</h1>
         {children}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { FaDolly, FaRedo, FaDollarSign } from "react-icons/fa";
+import { FaDolly, FaDollarSign } from "react-icons/fa";
 import { GiTeapot } from "react-icons/gi";
 
 export default class Services extends Component {
@@ -30,7 +30,7 @@ export default class Services extends Component {
   };
   render() {
     return (
-      <ServicesWrapper class="py-5">
+      <ServicesWrapper className="py-5">
         <div className="container">
           <div className="row">
             {this.state.services.map(item => {

@@ -29,9 +29,40 @@ export default function SingleProductPage() {
               <div className="container">
                 <div className="row">
                   <div className="col-10 mx-auto col-sm-8 col-md-6 my-3">
-                    <img src={`../${image}`} alt="single product" />
+                    <img
+                      src={`../${image}`}
+                      alt="single product"
+                      style={{ borderRadius: "20px" }}
+                    />
                   </div>
-                  <div className="col-10 mx-auto col-sm-8 col-md-6 my-3"></div>
+                  <div className="col-10 mx-auto col-sm-8 col-md-6 my-3">
+                    <h5 className="text-title mb-4">Tea Type: {title}</h5>
+                    <h5 className="text-capitalize text-muted mb-4">
+                      Producer: {company}
+                    </h5>
+                    <h5 className="text-main text-capilize mb-4">
+                      Price: ${price} /100g
+                    </h5>
+                    <p className="text-capitalize text-title mt-3">
+                      Tea Details:
+                    </p>
+                    <p style={{ fontWeight: "bold" }}>{description}</p>
+                    <button
+                      type="button"
+                      className="main-link"
+                      style={{ margin: "0.75rem" }}
+                      onClick={() => addToCart(id)}
+                    >
+                      Add to Cart
+                    </button>
+                    <Link
+                      to="/products"
+                      className="main-link"
+                      style={{ margin: "0.75rem" }}
+                    >
+                      Back To Products
+                    </Link>
+                  </div>
                 </div>
               </div>
             </section>

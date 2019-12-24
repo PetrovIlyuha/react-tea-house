@@ -12,11 +12,10 @@ export default class Featured extends Component {
           {/*Title*/}
           <Title title="featured products" center="true" />
           {/*Products*/}
-          <div className="row">
+          <div className="row my-5">
             <ProductConsumer>
               {value => {
                 const { featuredProducts } = value;
-                console.log(featuredProducts);
                 return featuredProducts.map(product => (
                   <Product key={product.id} product={product}></Product>
                 ));

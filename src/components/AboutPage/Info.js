@@ -1,10 +1,11 @@
 import React from "react";
 import Title from "../Title";
 import aboutBackground from "../../images/aboutBackground.jpg";
+import styled from "styled-components";
 
 export default function Info() {
   return (
-    <section className="py-5">
+    <StyledAboutSection className="py-5">
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-6 my-3">
@@ -42,6 +43,10 @@ export default function Info() {
           </div>
         </div>
       </div>
-    </section>
+    </StyledAboutSection>
   );
 }
+
+const StyledAboutSection = styled.section`
+  box-shadow: -1px -10px 20px -4px rgba(0, 0, 0, 0.75);
+`;

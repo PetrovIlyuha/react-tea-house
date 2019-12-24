@@ -1,9 +1,10 @@
 import React from "react";
 import Title from "../Title";
+import styled from "styled-components";
 
 export default function Contact() {
   return (
-    <section className="py-5">
+    <StyledContactSection className="py-5">
       <div className="row">
         <div className="col-10 mx-auto col-md-6 my-3">
           <Title title="contact us" />
@@ -54,6 +55,10 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </StyledContactSection>
   );
 }
+
+const StyledContactSection = styled.section`
+  box-shadow: -1px -10px 20px -4px rgba(0, 0, 0, 0.75);
+`;

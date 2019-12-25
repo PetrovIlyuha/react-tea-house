@@ -12,9 +12,7 @@ export default function CartList() {
               const { cart, increment, decrement, removeItem } = value;
               if (cart.length === 0) {
                 return (
-                  <h1 className="text-title text-center my-4">
-                    Your Cart Is Empty Now
-                  </h1>
+                  <h1 className="text-title text-center my-4">Cart is Empty</h1>
                 );
               }
               return (

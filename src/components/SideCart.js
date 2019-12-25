@@ -42,7 +42,7 @@ export default function SideCart() {
 
 const CartWrapper = styled.div`
   position: fixed;
-  top: 118px;
+  top: 83px;
   right: -3px;
   width: 0;
   height: 100%;
@@ -54,6 +54,9 @@ const CartWrapper = styled.div`
   transition: var(--mainTransition);
   @media (min-width: 576px) {
     width: 20rem;
+  }
+  @media (max-width: 768px) {
+    top: 48px;
   }
   overflow: scroll;
   padding: 2rem;

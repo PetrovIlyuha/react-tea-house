@@ -5,10 +5,10 @@ export default function CartColumns() {
     <div className="container-fluid text-center d-none d-lg-block my-5">
       <div className="row">
         <div className="col-lg-2">
-          <p className="text-uppercase text-title">Products</p>
+          <p className="text-uppercase text-title">Product</p>
         </div>
         <div className="col-lg-2">
-          <p className="text-uppercase text-title">Title</p>
+          <p className="text-uppercase text-title">Tea Name</p>
         </div>
         <div className="col-lg-2">
           <p className="text-uppercase text-title">Price</p>

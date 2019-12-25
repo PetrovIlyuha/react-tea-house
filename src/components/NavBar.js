@@ -51,7 +51,7 @@ const NavWrapper = styled.nav`
   z-index: 100;
   top: 0;
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   background: linear-gradient(to left, #003973, #e5e5be);
   /* background: var(--primaryColor); */
   border-bottom: 2px solid var(--primaryColor);
@@ -65,7 +65,7 @@ const NavWrapper = styled.nav`
   }
 
   .brand {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #2a4729;
   }
 
@@ -74,15 +74,21 @@ const NavWrapper = styled.nav`
   }
 
   .cart-items {
-    position: absolute;
-    background: lightyellow;
-    color: var(--primaryColor);
-    font-size: 0.9rem;
-    top: -16px;
-    right: -17px;
-    padding: 3px 3px;
+    float: right;
+    text-align: center;
     border-radius: 50%;
-    border: 1px solid darkgreen;
+    border: 2px solid lightcoral;
+    background-color: #2d2d2d;
+    color: #aafe0e;
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    padding-left: 1px;
+    padding-top: 2px;
+    letter-spacing: 0.5px;
   }
 
   .teapot {
@@ -110,5 +116,24 @@ const NavWrapper = styled.nav`
   .logo-section .logo-span {
     color: gold;
     margin-left: -20px;
+  }
+
+  @media (max-width: 768px) {
+    .brand {
+      font-size: 2rem;
+    }
+    .logo-section {
+      font-size: 1rem;
+    }
+
+    .teapot {
+      width: 20%;
+    }
+    .nav-icon-right {
+      font-size: 1.2rem;
+    }
+    .nav-icon-left {
+      font-size: 1.2rem;
+    }
   }
 `;

@@ -34,7 +34,7 @@ export default function SideBar() {
 
 const SideWrapper = styled.nav`
   position: fixed;
-  top: 118px;
+  top: 83px;
   left: -5px;
   width: 100%;
   height: 100%;
@@ -67,5 +67,8 @@ const SideWrapper = styled.nav`
   }
   @media (min-width: 576px) {
     width: 20rem;
+  }
+  @media (max-width: 768px) {
+    top: 48px;
   }
 `;

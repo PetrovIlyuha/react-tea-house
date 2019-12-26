@@ -32,7 +32,8 @@ export const items = [
       description:
         "Dan Cong is a very old tea which history record dates back to 900 years ago. The tea plants are believed to be a specimen of the Shui Xian strain that have been carefully selected to breed as Dan Cong's tree, which is a single trunk tree that rises tall and straight up, and with branches that open out like an umbrella. Feng Huang Dan Cong was also an Imperial tribute tea during the Song dynasty.",
       featured: true,
-      image: { fields: { file: { url: "../img/lonelyBushes.jpg" } } }
+      image: { fields: { file: { url: "../img/lonelyBushes.jpg" } } },
+      freeShipping: false
     }
   },
   {
@@ -44,7 +45,8 @@ export const items = [
       description:
         "Tie Guan Yin (铁观音) is a premium variety of Chinese oolong tea originated in the 19th century in Anxi in Fujian province. Tie Guan Yin produced in different areas of Anxi have different gastronomic characteristics. Production has since extended to many regions even outside of China, including Taiwan. The tea is named after the Chinese Goddess of Mercy Guan Yin, who is known in Japan as Kannon and in Korea as Guam-eum. Guan Yin is a female embodiment of Avalokiteśvara Bodhisattva.",
       featured: false,
-      image: { fields: { file: { url: "../img/teGuanin.jpg" } } }
+      image: { fields: { file: { url: "../img/teGuanin.jpg" } } },
+      freeShipping: true
     }
   },
   {
@@ -56,7 +58,8 @@ export const items = [
       description:
         "Oolong Zhou Guy or Cinnamon from the mountains of Wuyi got its name due to its light but persistent aroma of cinnamon. Its taste is rich, tart, with delicate shades of wild honey, and the aroma is floral and woody. It grows on the mountainous cliffs of Wuyishan, whose soil is fertile and rich in mineral elements. After the fermentation process and a long roasting in an open oven it gets dark. When brewing its leaves acquire a yellow-green color with red veins.Tea was known at the Imperial court and is one of the most popular and favorite Oolong in China. You can drink it every day, as it has a great taste and has a positive effect on the whole body, stabilizes the cardiovascular and digestive system. It cleanses the lungs, liver, breaks down fat and removes toxins. This tea will quench your thirst, improve your mood.",
       featured: false,
-      image: { fields: { file: { url: "../img/cinnamonFromUi.jpg" } } }
+      image: { fields: { file: { url: "../img/cinnamonFromUi.jpg" } } },
+      freeShipping: true
     }
   },
   {
@@ -68,7 +71,8 @@ export const items = [
       description:
         "Dong Ding Oolong is of the most famous and finest Formosa Oolong. The leaves of this tea are carefully hand-picked from Mount Dong Ding in Taiwan. It is believed that Dong Ding Oolong tea plants are actually a specimen of Wuyi strain that have been carefully selected and re-planted in Taiwan. As with most Taiwanese Oolongs, the frangrance and taste of this tea is wonderfully sweet and will leave you craving for more.",
       featured: false,
-      image: { fields: { file: { url: "../img/dongding.jpg" } } }
+      image: { fields: { file: { url: "../img/dongding.jpg" } } },
+      freeShipping: true
     }
   },
   {
@@ -80,7 +84,8 @@ export const items = [
       description:
         'This unconventional 250 grams Tou Cha is made from Da Ye Zhong tea leaves from Nan Jian Wu Liang Mountain in Yunnan province. On the box is the Chinese words "Da Feng Chao Yang", which translate to "Rising Phoenix". This is the 25th Anniversary Special Edition tea. As soon as you open the box you will notice the exceptionally strong fragrance. A very good Tuo Cha that can only get better as it ages.',
       featured: false,
-      image: { fields: { file: { url: "../img/fenghuangtuocha.jpg" } } }
+      image: { fields: { file: { url: "../img/fenghuangtuocha.jpg" } } },
+      freeShipping: true
     }
   },
   {
@@ -92,7 +97,8 @@ export const items = [
       description:
         "This special blend of Pu-erh with Chrysanthemum flowers is very popular in Hong Kong. It is commonly served in many Chinese restaurants, especially during a Dim Sum meal. Not only is it delicious, but it is considered particularly good for cooling internal heat, as well as being able to aid digest the oily food. To ensure freshness, we will only create the blend when we received an order for this tea.",
       featured: true,
-      image: { fields: { file: { url: "../img/puehrjasmine.jpg" } } }
+      image: { fields: { file: { url: "../img/puehrjasmine.jpg" } } },
+      freeShipping: false
     }
   }
 ];

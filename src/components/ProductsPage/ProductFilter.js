@@ -31,10 +31,10 @@ export default function ProductFilter() {
                 <div>
                   <label htmlFor="search">search products</label>
                   <input
+                    onChange={handleChange}
                     type="text"
                     name="search"
                     id="search"
-                    onChange={handleChange}
                     value={search}
                     className="filter-item"
                   />
@@ -44,10 +44,10 @@ export default function ProductFilter() {
                 <div>
                   <label htmlFor="company">company</label>
                   <select
+                    onChange={handleChange}
                     name="company"
                     id="company"
                     className="filter-item"
-                    onChange={handleChange}
                     value={company}
                   >
                     {companies.map((company, index) => {
@@ -68,6 +68,7 @@ export default function ProductFilter() {
                     </p>
                   </label>
                   <input
+                    onChange={handleChange}
                     type="range"
                     name="price"
                     id="price"
@@ -75,7 +76,6 @@ export default function ProductFilter() {
                     max={max}
                     className="filter-price"
                     value={price}
-                    onChange={handleChange}
                   />
                 </div>
                 {/* end of price range */}

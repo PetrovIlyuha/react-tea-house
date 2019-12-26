@@ -16,6 +16,13 @@ export default function ProductFilter() {
           handleChange,
           storeProducts
         } = value;
+        let companies = new Set();
+        companies.add("all");
+        for (let product in storeProducts) {
+          companies.add(storeProducts[product]["company"]);
+        }
+        companies = [...companies];
+
         return (
           <div className="row my-5">
             <div className="col-10 mx-auto">
@@ -43,13 +50,13 @@ export default function ProductFilter() {
                     onChange={handleChange}
                     value={company}
                   >
-                    <option value="White Monkey Green Tea">
-                      White Monkey Green Tea
-                    </option>
-                    <option value="all">Four Seasons Tea Company</option>
-                    <option value="all">Da Li Nan Jian Tea Industry</option>
-                    <option value="all">Nan Tou, Taiwan</option>
-                    <option value="all">Feng Huang Shan</option>
+                    {companies.map((company, index) => {
+                      return (
+                        <option key={index} value={company}>
+                          {company}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
                 {/* end of category search */}

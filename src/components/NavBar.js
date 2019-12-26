@@ -1,6 +1,10 @@
 import React from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import "../App.css";
+import { Link } from "react-router-dom";
+import { GiTeapotLeaves, GiMushroomHouse } from "react-icons/gi";
+import { GoInfo } from "react-icons/go";
+import { MdPhonelinkRing } from "react-icons/md";
 
 import { GiSplitCross } from "react-icons/gi";
 
@@ -29,6 +33,20 @@ export default function NavBar() {
                 <h1 className="brand">
                   Tea <span className="logo-span">House</span>
                 </h1>
+              </div>
+              <div className="pages-on-navbar">
+                <Link to="/">
+                  <GiMushroomHouse className="sections-icons" />
+                </Link>
+                <Link to="/products">
+                  <GiTeapotLeaves className="sections-icons" />
+                </Link>
+                <Link to="/about">
+                  <GoInfo className="sections-icons" />
+                </Link>
+                <Link to="/contact">
+                  <MdPhonelinkRing className="sections-icons" />
+                </Link>
               </div>
               <div className="nav-cart">
                 <FaCartPlus
@@ -111,11 +129,29 @@ const NavWrapper = styled.nav`
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    margin-top: 5px;
   }
 
   .logo-section .logo-span {
     color: gold;
     margin-left: -20px;
+  }
+
+  .pages-on-navbar {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
+  }
+
+  .sections-icons {
+    font-size: 3rem;
+    color: #94ebb0;
+    padding: 10px;
+  }
+
+  .sections-icons:hover {
+    color: lightskyblue;
   }
 
   @media (max-width: 768px) {
@@ -134,6 +170,9 @@ const NavWrapper = styled.nav`
     }
     .nav-icon-left {
       font-size: 1.2rem;
+    }
+    .sections-icons {
+      font-size: 2.5rem;
     }
   }
 `;

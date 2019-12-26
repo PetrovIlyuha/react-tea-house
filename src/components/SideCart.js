@@ -2,14 +2,27 @@ import React from "react";
 import { ProductConsumer } from "../context";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import {
+  FaTrash,
+  FaChevronCircleUp,
+  FaChevronCircleDown
+} from "react-icons/fa";
 
 export default function SideCart() {
   return (
     <ProductConsumer>
       {value => {
-        const { cartOpen, closeCart, cart, cartTotal } = value;
-        return (
-          <CartWrapper show={cartOpen} onClick={closeCart}>
+        const {
+          cartOpen,
+          closeCart,
+          cart,
+          cartTotal,
+          increment,
+          decrement,
+          removeItem
+        } = value;
+        return cart.length ? (
+          <CartWrapper show={cartOpen}>
             <ul className="mt-3">
               {cart.map(item => {
                 return (
@@ -20,6 +33,21 @@ export default function SideCart() {
                       <h6 className="text-title text-capitalize">
                         Amount: {item.count}
                       </h6>
+                      <FaChevronCircleUp
+                        className="cart-icon text-primary"
+                        onClick={() => increment(item.id)}
+                        style={{ fontSize: "1.2rem", marginRight: "6px" }}
+                      />
+                      <FaChevronCircleDown
+                        className="cart-icon text-primary"
+                        onClick={() => decrement(item.id)}
+                        style={{ fontSize: "1.2rem" }}
+                      />
+                      <FaTrash
+                        className="cart-icon text-danger"
+                        onClick={() => removeItem(item.id)}
+                        style={{ fontSize: "1.2rem", marginLeft: "30px" }}
+                      />
                     </div>
                   </li>
                 );
@@ -29,12 +57,12 @@ export default function SideCart() {
               cart total: ${cartTotal}
             </h4>
             <div className="text-center my-5">
-              <Link to="/cart" className="main-link">
+              <Link to="/cart" className="main-link" onClick={closeCart}>
                 Cart Page
               </Link>
             </div>
           </CartWrapper>
-        );
+        ) : null;
       }}
     </ProductConsumer>
   );

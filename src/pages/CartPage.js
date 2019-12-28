@@ -4,7 +4,7 @@ import CartBackground from "../images/cartBack.jpg";
 import CartSection from "../components/CartPage";
 import { Link } from "react-router-dom";
 
-export default function CartPage() {
+export default function CartPage(props) {
   return (
     <>
       <Hero img={CartBackground}>
@@ -12,7 +12,7 @@ export default function CartPage() {
           Our Products
         </Link>
       </Hero>
-      <CartSection />
+      <CartSection history={props.history} />
     </>
   );
 }

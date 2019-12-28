@@ -38,7 +38,6 @@ export class ProductProvider extends Component {
       })
       .then(response => this.setProducts(response.items))
       .catch(console.error);
-    // this.setProducts(items);
   }
 
   setProducts = products => {

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { linkData } from "./linkData";
 import { socialData } from "./socialData";
-import { items } from "./productData";
+// import { items } from "./productData";
+import { client } from "./contentful";
+
 const ProductContext = React.createContext();
 
 export class ProductProvider extends Component {
@@ -30,8 +32,13 @@ export class ProductProvider extends Component {
 
   componentDidMount() {
     // from contentful items
-
-    this.setProducts(items);
+    client
+      .getEntries({
+        content_type: "teaStoreProducts"
+      })
+      .then(response => this.setProducts(response.items))
+      .catch(console.error);
+    // this.setProducts(items);
   }
 
   setProducts = products => {
@@ -44,7 +51,7 @@ export class ProductProvider extends Component {
     // feautured products
     let featuredProducts = storeProducts.filter(item => item.featured === true);
     // get max price
-    let maxPrice = Math.max(...storeProducts.map(item => item.price));
+    let maxPrice = Math.max(...storeProducts.map(item => item.price)) + 1;
     this.setState(
       {
         storeProducts,

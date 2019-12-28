@@ -8,7 +8,8 @@ export const items = [
       description:
         "Baimao Hou is a green tea made from the leaves and bud of the green tea leaf when harvested during the first two weeks of the season (late March to early April). It originates from the Taimu Mountains in Fujian Province, China. The delicate leaves are carefully steamed and dried. The name originates from the appearance of the dried leaves, which are said to resemble the paw of a white-haired monkey. Due to the tea's appearance, flavor, and name, it is often mistaken for a white tea.",
       featured: true,
-      image: { fields: { file: { url: "img/whiteMonkey.jpg" } } }
+      image: { fields: { file: { url: "img/whiteMonkey.jpg" } } },
+      freeShipping: true
     }
   },
   {
@@ -20,7 +21,8 @@ export const items = [
       description:
         "Four Seasons of Spring is named so because it produces four flushes (or harvests) each year that have a flavor and quality of that of a spring flush. This varietal was cultivated in Taiwan from a strain of TieGuanYin (Iron Goddess of Mercy), in the 1980s. This delightful oolong varietal has been cultivated for its sweet, floral flavors and expertly processed by hand. It is light yet buttery with lingering flowery finish of morning gardenias and warm milk.  Good for 2-4 infusions.Four Seasons of Spring is a good tea for beginning brewers. This tea is light, sweet and extremely fragrant.  The taste of gardenias clings to the upper palate and dazzles the senses.",
       featured: true,
-      image: { fields: { file: { url: "img/fourSeasonsSpring.jpg" } } }
+      image: { fields: { file: { url: "img/fourSeasonsSpring.jpg" } } },
+      freeShipping: true
     }
   },
   {
